@@ -1,0 +1,12 @@
+runner:
+  title: TLS Certificate Checker
+  description: This runner checks TLS/SSL certificates of specified domains, verifying their validity dates and expiration status. It can monitor multiple domains simultaneously and alert users when certificates are approaching expiration or have already expired.
+  version: 0.0.1
+
+webform:
+  - name: domain_name
+    prompt: domain name
+    type: text
+
+launch:
+  command: app.py ${domain_name}
