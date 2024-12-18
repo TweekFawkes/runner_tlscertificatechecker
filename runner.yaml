@@ -3,6 +3,12 @@ runner:
   description: This runner checks TLS/SSL certificates of specified domains, verifying their validity dates and expiration status. It can monitor multiple domains simultaneously and alert users when certificates are approaching expiration or have already expired.
   version: 0.0.1
 
+build:
+  commands: |
+    echo "START: Building the runner"
+    python3 -m pip install -U -r app/runner/requirements.txt
+    echo "END: Building the runner"
+
 webform:
   - name: domain_name
     prompt: domain name
